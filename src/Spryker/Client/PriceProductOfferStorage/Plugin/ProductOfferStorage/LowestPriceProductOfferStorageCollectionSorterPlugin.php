@@ -5,15 +5,13 @@
  * Use of this software requires acceptance of the Spryker Marketplace License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage;
+namespace Spryker\Client\PriceProductOfferStorage\Plugin\ProductOfferStorage;
 
 use Generated\Shared\Transfer\ProductOfferStorageCollectionTransfer;
 use Spryker\Client\Kernel\AbstractPlugin;
-use Spryker\Client\MerchantProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageCollectionSorterPluginInterface;
+use Spryker\Client\ProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageCollectionSorterPluginInterface;
 
 /**
- * @deprecated Use {@link \Spryker\Client\PriceProductOfferStorage\Plugin\ProductOfferStorage\LowestPriceProductOfferStorageCollectionSorterPlugin} instead.
- *
  * @method \Spryker\Client\PriceProductOfferStorage\PriceProductOfferStorageFactory getFactory()
  */
 class LowestPriceProductOfferStorageCollectionSorterPlugin extends AbstractPlugin implements ProductOfferStorageCollectionSorterPluginInterface
