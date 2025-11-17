@@ -9,12 +9,13 @@ namespace Spryker\Client\PriceProductOfferStorage\Plugin\PriceProductStorage;
 
 use Spryker\Client\Kernel\AbstractPlugin;
 use Spryker\Client\PriceProductStorageExtension\Dependency\Plugin\PriceProductStoragePriceDimensionPluginInterface;
+use Spryker\Client\PriceProductStorageExtension\Dependency\Plugin\StorePriceProductStoragePriceDimensionPluginInterface;
 use Spryker\Shared\PriceProductOfferStorage\PriceProductOfferStorageConfig;
 
 /**
  * @method \Spryker\Client\PriceProductOfferStorage\PriceProductOfferStorageClientInterface getClient()
  */
-class PriceProductOfferStorageDimensionPlugin extends AbstractPlugin implements PriceProductStoragePriceDimensionPluginInterface
+class PriceProductOfferStorageDimensionPlugin extends AbstractPlugin implements PriceProductStoragePriceDimensionPluginInterface, StorePriceProductStoragePriceDimensionPluginInterface
 {
     /**
      * {@inheritDoc}
@@ -29,6 +30,22 @@ class PriceProductOfferStorageDimensionPlugin extends AbstractPlugin implements 
     public function findProductConcretePrices(int $idProductConcrete): array
     {
         return $this->getClient()->getProductOfferPrices($idProductConcrete);
+    }
+
+    /**
+     * {@inheritDoc}
+     * - Returns offer prices data from Storage for concrete product.
+     *
+     * @api
+     *
+     * @param int $idProductConcrete
+     * @param string $storeName
+     *
+     * @return array<\Generated\Shared\Transfer\PriceProductTransfer>
+     */
+    public function findProductConcretePricesForStore(int $idProductConcrete, string $storeName): array
+    {
+        return $this->getClient()->getProductOfferPrices($idProductConcrete, $storeName);
     }
 
     /**

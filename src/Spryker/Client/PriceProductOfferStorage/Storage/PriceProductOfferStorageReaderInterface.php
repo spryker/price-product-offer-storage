@@ -11,8 +11,9 @@ interface PriceProductOfferStorageReaderInterface
 {
     /**
      * @param int $idProductConcrete
+     * @param string|null $storeName
      *
      * @return array<\Generated\Shared\Transfer\PriceProductTransfer>
      */
-    public function getProductOfferPrices(int $idProductConcrete): array;
+    public function getProductOfferPrices(int $idProductConcrete, ?string $storeName = null): array;
 }

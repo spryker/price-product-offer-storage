@@ -93,13 +93,13 @@ class PriceProductOfferStorageReader implements PriceProductOfferStorageReaderIn
      *
      * @return array<\Generated\Shared\Transfer\PriceProductTransfer>
      */
-    public function getProductOfferPrices(int $idProductConcrete): array
+    public function getProductOfferPrices(int $idProductConcrete, ?string $storeName = null): array
     {
         if (isset(static::$productOfferPricesByIdProductConcrete[$idProductConcrete])) {
             return static::$productOfferPricesByIdProductConcrete[$idProductConcrete];
         }
 
-        $priceProductOfferKey = $this->generateKey($idProductConcrete);
+        $priceProductOfferKey = $this->generateKey($idProductConcrete, $storeName);
         $priceProductOfferData = $this->storageClient->get($priceProductOfferKey);
 
         if (!$priceProductOfferData) {
@@ -136,11 +136,11 @@ class PriceProductOfferStorageReader implements PriceProductOfferStorageReaderIn
      *
      * @return string
      */
-    protected function generateKey(int $idProductConcrete): string
+    protected function generateKey(int $idProductConcrete, ?string $storeName = null): string
     {
         $synchronizationDataTransfer = new SynchronizationDataTransfer();
         $synchronizationDataTransfer->setReference((string)$idProductConcrete);
-        $synchronizationDataTransfer->setStore($this->getCurrentStoreName());
+        $synchronizationDataTransfer->setStore($storeName ?? $this->getCurrentStoreName());
 
         return $this->getStorageKeyBuilder()->generateKey($synchronizationDataTransfer);
     }
