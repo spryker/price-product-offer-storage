@@ -16,12 +16,6 @@ use Spryker\Shared\PriceProductOfferStorage\PriceProductOfferStorageConfig;
 
 class PriceProductOfferStorageMapper implements PriceProductOfferStorageMapperInterface
 {
-    /**
-     * @param array $priceProductOffer
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     public function mapPriceProductOfferStorageDataToPriceProductTransfer(
         array $priceProductOffer,
         PriceProductTransfer $priceProductTransfer

@@ -13,11 +13,6 @@ use Generated\Shared\Transfer\ProductOfferStorageTransfer;
 
 class PriceProductOfferStorageSorter implements PriceProductOfferStorageSorterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferStorageCollectionTransfer $productOfferStorageCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferStorageCollectionTransfer
-     */
     public function sort(ProductOfferStorageCollectionTransfer $productOfferStorageCollectionTransfer): ProductOfferStorageCollectionTransfer
     {
         $productOffers = $productOfferStorageCollectionTransfer->getProductOffers()->getArrayCopy();

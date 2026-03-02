@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\ProductOfferStorageCollectionTransfer;
 
 interface PriceProductOfferStorageSorterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferStorageCollectionTransfer $productOfferStorageCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferStorageCollectionTransfer
-     */
     public function sort(ProductOfferStorageCollectionTransfer $productOfferStorageCollectionTransfer): ProductOfferStorageCollectionTransfer;
 }

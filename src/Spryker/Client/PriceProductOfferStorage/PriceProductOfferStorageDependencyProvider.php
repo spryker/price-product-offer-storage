@@ -47,11 +47,6 @@ class PriceProductOfferStorageDependencyProvider extends AbstractDependencyProvi
      */
     public const CLIENT_PRICE_PRODUCT_STORAGE = 'CLIENT_PRICE_PRODUCT_STORAGE';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
@@ -66,11 +61,6 @@ class PriceProductOfferStorageDependencyProvider extends AbstractDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addSynchronizationService(Container $container): Container
     {
         $container->set(static::SERVICE_SYNCHRONIZATION, function (Container $container) {
@@ -80,11 +70,6 @@ class PriceProductOfferStorageDependencyProvider extends AbstractDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_STORAGE, function (Container $container) {
@@ -94,11 +79,6 @@ class PriceProductOfferStorageDependencyProvider extends AbstractDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addStoreFacade(Container $container): Container
     {
         $container->set(static::FACADE_STORE_CLIENT, function (Container $container) {
@@ -108,11 +88,6 @@ class PriceProductOfferStorageDependencyProvider extends AbstractDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addPriceProductService(Container $container): Container
     {
         $container->set(static::FACADE_PRICE_PRODUCT_SERVICE, function (Container $container) {
@@ -122,11 +97,6 @@ class PriceProductOfferStorageDependencyProvider extends AbstractDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addPriceProductOfferStoragePriceExtractorPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_PRICE_PRODUCT_OFFER_STORAGE_PRICE_EXTRACTOR, function () {
@@ -144,11 +114,6 @@ class PriceProductOfferStorageDependencyProvider extends AbstractDependencyProvi
         return [];
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addPriceProductStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_PRICE_PRODUCT_STORAGE, function (Container $container) {

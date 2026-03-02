@@ -22,11 +22,6 @@ interface PriceProductOfferStorageToPriceProductOfferFacadeInterface
         PriceProductOfferCriteriaTransfer $priceProductOfferCriteriaTransfer
     ): ArrayObject;
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductOfferCriteriaTransfer $priceProductOfferCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductOfferCollectionTransfer
-     */
     public function getPriceProductOfferCollection(
         PriceProductOfferCriteriaTransfer $priceProductOfferCriteriaTransfer
     ): PriceProductOfferCollectionTransfer;

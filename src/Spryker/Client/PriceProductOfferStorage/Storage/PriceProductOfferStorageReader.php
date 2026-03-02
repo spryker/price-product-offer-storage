@@ -131,11 +131,6 @@ class PriceProductOfferStorageReader implements PriceProductOfferStorageReaderIn
         return $priceProductTransfers;
     }
 
-    /**
-     * @param int $idProductConcrete
-     *
-     * @return string
-     */
     protected function generateKey(int $idProductConcrete, ?string $storeName = null): string
     {
         $synchronizationDataTransfer = new SynchronizationDataTransfer();
@@ -145,9 +140,6 @@ class PriceProductOfferStorageReader implements PriceProductOfferStorageReaderIn
         return $this->getStorageKeyBuilder()->generateKey($synchronizationDataTransfer);
     }
 
-    /**
-     * @return string
-     */
     protected function getCurrentStoreName(): string
     {
         if (static::$storeName === null) {
@@ -160,9 +152,6 @@ class PriceProductOfferStorageReader implements PriceProductOfferStorageReaderIn
         return $storeName;
     }
 
-    /**
-     * @return \Spryker\Service\Synchronization\Dependency\Plugin\SynchronizationKeyGeneratorPluginInterface
-     */
     protected function getStorageKeyBuilder(): SynchronizationKeyGeneratorPluginInterface
     {
         if (static::$storageKeyBuilder === null) {

@@ -111,11 +111,6 @@ class PriceProductOfferSynchronizationDataBulkRepositoryPlugin extends AbstractP
             ->getPriceProductOfferSynchronizationPoolName();
     }
 
-    /**
-     * @param \Orm\Zed\PriceProductOfferStorage\Persistence\SpyProductConcreteProductOfferPriceStorage $productConcreteProductOfferPriceStorageEntity
-     *
-     * @return \Generated\Shared\Transfer\SynchronizationDataTransfer
-     */
     protected function createSynchronizationDataTransfer(
         SpyProductConcreteProductOfferPriceStorage $productConcreteProductOfferPriceStorageEntity
     ): SynchronizationDataTransfer {

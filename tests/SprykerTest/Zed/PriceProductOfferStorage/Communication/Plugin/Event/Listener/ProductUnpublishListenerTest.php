@@ -59,9 +59,6 @@ class ProductUnpublishListenerTest extends Unit
      */
     protected $productConcreteTransfer;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -88,9 +85,6 @@ class ProductUnpublishListenerTest extends Unit
         ]);
     }
 
-    /**
-     * @return void
-     */
     public function testProductOfferStoragePublishListener(): void
     {
         //Arrange
@@ -119,9 +113,6 @@ class ProductUnpublishListenerTest extends Unit
         $this->assertSame(0, $countPriceProductOfferStorageEntities);
     }
 
-    /**
-     * @return void
-     */
     protected function _after(): void
     {
         parent::_after();

@@ -58,11 +58,6 @@ class PriceProductOfferStorageWriter implements PriceProductOfferStorageWriterIn
      */
     protected $eventBehaviorFacade;
 
-    /**
-     * @param \Spryker\Zed\PriceProductOfferStorage\Dependency\Facade\PriceProductOfferStorageToEventFacadeInterface $eventFacade
-     * @param \Spryker\Zed\PriceProductOfferStorage\Dependency\Facade\PriceProductOfferStorageToPriceProductOfferFacadeInterface $priceProductOfferFacade
-     * @param \Spryker\Zed\PriceProductOfferStorage\Dependency\Facade\PriceProductOfferStorageToEventBehaviorFacadeInterface $eventBehaviorFacade
-     */
     public function __construct(
         PriceProductOfferStorageToEventFacadeInterface $eventFacade,
         PriceProductOfferStorageToPriceProductOfferFacadeInterface $priceProductOfferFacade,
@@ -236,11 +231,6 @@ class PriceProductOfferStorageWriter implements PriceProductOfferStorageWriterIn
         return $productEntities;
     }
 
-    /**
-     * @param array $priceProductOffers
-     *
-     * @return void
-     */
     protected function savePriceProductOfferStorage(array $priceProductOffers): void
     {
         $groupedProductOffersByStoreAndProductSku = [];
@@ -266,11 +256,6 @@ class PriceProductOfferStorageWriter implements PriceProductOfferStorageWriterIn
         }
     }
 
-    /**
-     * @param array $productOffer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductOfferStorageTransfer
-     */
     protected function createPriceProductOfferStorageTransfer(array $productOffer): PriceProductOfferStorageTransfer
     {
         $priceProductOfferStorageTransfer = new PriceProductOfferStorageTransfer();

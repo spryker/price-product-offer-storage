@@ -18,17 +18,11 @@ use Spryker\Zed\PriceProductOfferStorage\PriceProductOfferStorageDependencyProvi
  */
 class PriceProductOfferStorageCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\PriceProductOfferStorage\Dependency\Facade\PriceProductOfferStorageToEventBehaviorFacadeInterface
-     */
     public function getEventBehaviorFacade(): PriceProductOfferStorageToEventBehaviorFacadeInterface
     {
         return $this->getProvidedDependency(PriceProductOfferStorageDependencyProvider::FACADE_EVENT_BEHAVIOR);
     }
 
-    /**
-     * @return \Spryker\Zed\PriceProductOfferStorage\Dependency\Facade\PriceProductOfferStorageToPriceProductOfferFacadeInterface
-     */
     public function getPriceProductOfferFacade(): PriceProductOfferStorageToPriceProductOfferFacadeInterface
     {
         return $this->getProvidedDependency(PriceProductOfferStorageDependencyProvider::FACADE_PRICE_PRODUCT_OFFER);

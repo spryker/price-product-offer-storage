@@ -52,9 +52,6 @@ class PriceProductOfferStoragePublishListenerTest extends Unit
      */
     protected $productConcreteTransfer;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -80,9 +77,6 @@ class PriceProductOfferStoragePublishListenerTest extends Unit
         ]);
     }
 
-    /**
-     * @return void
-     */
     public function testProductOfferStoragePublishListener(): void
     {
         //Arrange
@@ -102,9 +96,6 @@ class PriceProductOfferStoragePublishListenerTest extends Unit
         $this->assertSame(1, $countPriceProductOfferStorageEntities);
     }
 
-    /**
-     * @return void
-     */
     protected function _after(): void
     {
         parent::_after();

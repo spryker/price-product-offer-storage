@@ -20,9 +20,6 @@ use Spryker\Zed\PriceProductOfferStorage\PriceProductOfferStorageDependencyProvi
  */
 class PriceProductOfferStorageBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\PriceProductOfferStorage\Business\PriceProductOfferStorage\PriceProductOfferStorageWriterInterface
-     */
     public function createPriceProductOfferStorageWriter(): PriceProductOfferStorageWriterInterface
     {
         return new PriceProductOfferStorageWriter(
@@ -32,25 +29,16 @@ class PriceProductOfferStorageBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\PriceProductOfferStorage\Dependency\Facade\PriceProductOfferStorageToEventFacadeInterface
-     */
     public function getEventFacade(): PriceProductOfferStorageToEventFacadeInterface
     {
         return $this->getProvidedDependency(PriceProductOfferStorageDependencyProvider::FACADE_EVENT);
     }
 
-    /**
-     * @return \Spryker\Zed\PriceProductOfferStorage\Dependency\Facade\PriceProductOfferStorageToPriceProductOfferFacadeInterface
-     */
     public function getPriceProductOfferFacade(): PriceProductOfferStorageToPriceProductOfferFacadeInterface
     {
         return $this->getProvidedDependency(PriceProductOfferStorageDependencyProvider::FACADE_PRICE_PRODUCT_OFFER);
     }
 
-    /**
-     * @return \Spryker\Zed\PriceProductOfferStorage\Dependency\Facade\PriceProductOfferStorageToEventBehaviorFacadeInterface
-     */
     public function getEventBehaviorFacade(): PriceProductOfferStorageToEventBehaviorFacadeInterface
     {
         return $this->getProvidedDependency(PriceProductOfferStorageDependencyProvider::FACADE_EVENT_BEHAVIOR);

@@ -83,12 +83,6 @@ class PriceProductOfferPublisherTriggerPlugin extends AbstractPlugin implements 
         return static::COL_ID_PRICE_PRODUCT_OFFER;
     }
 
-    /**
-     * @param int $offset
-     * @param int $limit
-     *
-     * @return \Generated\Shared\Transfer\PriceProductOfferCriteriaTransfer
-     */
     protected function createPriceProductOfferCriteriaTransfer(int $offset, int $limit): PriceProductOfferCriteriaTransfer
     {
         return (new PriceProductOfferCriteriaTransfer())
