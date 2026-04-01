@@ -85,4 +85,14 @@ class PriceProductOfferStorageConfig
      * @var string
      */
     public const PRICE_PRODUCT_OFFER_RESOURCE_NAME = 'price_product_offer';
+
+    /**
+     * Specification:
+     * - Queue name used for price product offer publish events.
+     *
+     * @api
+     *
+     * @var string
+     */
+    public const string PUBLISH_PRICE_PRODUCT_OFFER_QUEUE = 'publish.price_product_offer';
 }
